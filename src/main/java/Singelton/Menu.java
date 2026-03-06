@@ -1,5 +1,7 @@
 package Singelton;
 
+import java.util.Stack;
+
 public class Menu {
 
     int optionUser = -1;
@@ -11,7 +13,7 @@ public class Menu {
             menuText();     //Ensenya el text amb el menu
             InOutInfo dataInput = new InOutInfo(); // crea una instancia de la clase que crea el scanner
             String inputCommand; //comando entrat per l'usuari
-
+            String lastCommandInserted;
 
             System.out.println("Insert your option");
             optionUser = dataInput.getScanner().nextInt();
@@ -28,7 +30,13 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Undoing last task...");
-                    System.out.println(Undo.getInstance().undoCommand());
+                    lastCommandInserted = Undo.getInstance().undoCommand();
+                    System.out.println(lastCommandInserted);
+                    break;
+                case 3:
+                    System.out.println("Printing all commands..");
+                    Undo.getInstance().showHistory();
+                    System.out.println();
                     break;
                 case 4:
                     System.out.println("Closing programm...");
