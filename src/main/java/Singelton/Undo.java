@@ -1,5 +1,7 @@
 package Singelton;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class Undo {
@@ -31,11 +33,8 @@ public class Undo {
         return orderCommands.pop();
     }
 
-    public void showHistory(){
-        //void showHistory(); – mostra totes les comandes emmagatzemades fins al moment.
-        for (String command: orderCommands){
-            System.out.println(command);
-        }
+    public List<String> showHistory(){
+        return new ArrayList<>(orderCommands);
     }
 
 }
