@@ -27,6 +27,7 @@ public class Menu {
                     System.out.println("You have insert command \"" + inputCommand + " correctly!");
                     break;
                 case 2:
+                    System.out.println("Undoing last task...");
                     System.out.println(Undo.getInstance().undoCommand());
                     break;
                 case 4:
