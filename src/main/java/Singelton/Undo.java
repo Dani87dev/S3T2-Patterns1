@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Undo {
 
     static Undo instance;
-    private Stack<String> orderComands;
+    private Stack<String> orderComands = new Stack<>();
     
     //constructor privat
     private Undo(){};
