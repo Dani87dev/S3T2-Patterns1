@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Undo {
 
     static Undo instance;
-    private Stack<String> orderComands = new Stack<>();
+    private Stack<String> orderCommands = new Stack<>();
     
     //constructor privat
     private Undo(){};
@@ -21,25 +21,21 @@ public class Undo {
     }
 
     public void addCommand(String command){
-        orderComands.push(command);
+        orderCommands.push(command);
     }
 
     public String undoCommand(){
-        //String undoCommand(); – retorna i elimina l'última comanda.
-        return orderComands.pop();
+        if(orderCommands.isEmpty()){
+            return "You haven't entered any commands yet.";
+        }
+        return orderCommands.pop();
     }
 
     public void showHistory(){
         //void showHistory(); – mostra totes les comandes emmagatzemades fins al moment.
-        for (String command:orderComands){
+        for (String command: orderCommands){
             System.out.println(command);
         }
     }
 
-
-
-    //push("text")	Afegeix un element a sobre de tot de la pila.
-    //pop()	Treu i retorna l'element que hi ha a dalt de tot.
-    //peek()	Mira quin element hi ha a dalt de tot sense treure'l.
-    //isEmpty()	Comprova si la pila està buida.
 }

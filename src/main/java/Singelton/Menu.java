@@ -8,18 +8,17 @@ public class Menu {
 
     public void startapp() {
 
+        InOutInfo dataInput = new InOutInfo(); // crea una instancia de la clase que crea el scanner
+        String inputCommand; //comando entrat per l'usuari
+        String lastCommandInserted;
+
         do {
 
-            menuText();     //Ensenya el text amb el menu
-            InOutInfo dataInput = new InOutInfo(); // crea una instancia de la clase que crea el scanner
-            String inputCommand; //comando entrat per l'usuari
-            String lastCommandInserted;
-
+            menuText();
             System.out.println("Insert your option");
             optionUser = dataInput.getScanner().nextInt();
 
-            //neteja de l buffer
-            dataInput.getScanner().nextLine();
+            dataInput.getScanner().nextLine(); //neteja del buffer
 
             switch (optionUser) {
                 case 1:
