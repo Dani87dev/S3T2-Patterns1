@@ -5,6 +5,9 @@ public class UsaPhone implements Phone {
     private String phoneNumber;
 
     public UsaPhone(String phoneNumber) {
+        if(phoneNumber.length()!=9){
+            throw new RuntimeException("Usa Phone numbers must have 9 numbers");
+        }
         this.phoneNumber = phoneNumber;
     }
 
@@ -15,9 +18,9 @@ public class UsaPhone implements Phone {
     @Override
     public String getFormatedPhoneNumber() {
         //+1 (098) 765-4321 - format USA
-        return "+1 " + this.getPhoneNumber().substring(0, 1)
-                + ") " + this.getPhoneNumber().substring(2, 4)
-                + "-" + this.getPhoneNumber().substring(5, 8);
+        return "+1 (0" + this.getPhoneNumber().substring(0, 3)
+                + ") " + this.getPhoneNumber().substring(2, 5)
+                + "-" + this.getPhoneNumber().substring(5, 9);
 
     }
 }

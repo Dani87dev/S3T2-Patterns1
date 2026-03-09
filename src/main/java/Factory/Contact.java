@@ -20,6 +20,6 @@ public class Contact {
 
     @Override
     public String toString(){
-        return "Address: " + this.getAdress() + " | Phone: " + this.getPhone();
+        return "Address: " + adress.getFormatedAdress() + " | Phone: " + phone.getFormatedPhoneNumber();
     }
 }

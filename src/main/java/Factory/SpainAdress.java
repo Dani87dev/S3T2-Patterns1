@@ -26,7 +26,7 @@ public class SpainAdress implements Adress{
 
     @Override
     public String getFormatedAdress() {
-        return this.getStreet() + ", " + this.getCity() + " " + this.getCity();
+        return this.getStreet() + ", " + this.getPostalZip() + " " + this.getCity();
         //Carrer Major 34, 08001 Barcelona
     }
 }
