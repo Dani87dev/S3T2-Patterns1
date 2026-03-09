@@ -2,6 +2,6 @@ package Factory;
 
 public interface ContactFactory {
 
-    public Adress createAddress();
+    public Address createAddress();
     public Phone createPhone();
 }

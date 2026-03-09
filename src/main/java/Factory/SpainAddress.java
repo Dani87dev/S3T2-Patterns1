@@ -1,12 +1,12 @@
 package Factory;
 
-public class SpainAdress implements Adress{
+public class SpainAddress implements Address {
 
     private String street;
     private String city;
     private String postalZip;
 
-    public SpainAdress(String street, String city, String postalZip) {
+    public SpainAddress(String street, String city, String postalZip) {
         this.street = street;
         this.city = city;
         this.postalZip = postalZip;

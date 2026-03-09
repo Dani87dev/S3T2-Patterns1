@@ -15,9 +15,9 @@ public class UsaContactFactory implements ContactFactory{
     }
 
     @Override
-    public Adress createAddress() {
-        Adress usaAdress = new UsaAdress(street, city, postalZip);
-        return usaAdress;
+    public Address createAddress() {
+        Address usaAddress = new UsaAddress(street, city, postalZip);
+        return usaAddress;
     }
 
     @Override

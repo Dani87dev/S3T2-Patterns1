@@ -2,16 +2,16 @@ package Factory;
 
 public class Contact {
 
-    private Adress adress;
+    private Address address;
     private Phone phone;
 
     public Contact(ContactFactory factory){
-        this.adress = factory.createAddress();
+        this.address = factory.createAddress();
         this.phone = factory.createPhone();
     }
 
-    public Adress getAdress() {
-        return adress;
+    public Address getAdress() {
+        return address;
     }
 
     public Phone getPhone() {
@@ -20,6 +20,6 @@ public class Contact {
 
     @Override
     public String toString(){
-        return "Address: " + adress.getFormatedAdress() + " | Phone: " + phone.getFormatedPhoneNumber();
+        return "Address: " + address.getFormatedAdress() + " | Phone: " + phone.getFormatedPhoneNumber();
     }
 }

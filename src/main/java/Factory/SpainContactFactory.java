@@ -16,8 +16,8 @@ public class SpainContactFactory implements ContactFactory{
 
 
     @Override
-    public Adress createAddress() {
-        Adress spainAddress = new SpainAdress(street, city, postalZip);
+    public Address createAddress() {
+        Address spainAddress = new SpainAddress(street, city, postalZip);
         return spainAddress;
     }
 

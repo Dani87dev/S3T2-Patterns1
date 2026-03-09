@@ -18,7 +18,7 @@ public class UsaPhone implements Phone {
     @Override
     public String getFormatedPhoneNumber() {
         //+1 (098) 765-4321 - format USA
-        return "+1 (0" + this.getPhoneNumber().substring(0, 3)
+        return "+1 (0" + this.getPhoneNumber().substring(0, 2)
                 + ") " + this.getPhoneNumber().substring(2, 5)
                 + "-" + this.getPhoneNumber().substring(5, 9);
 

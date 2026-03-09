@@ -1,6 +1,6 @@
 package Factory;
 
-public interface Adress {
+public interface Address {
 
     String getFormatedAdress();
 }
