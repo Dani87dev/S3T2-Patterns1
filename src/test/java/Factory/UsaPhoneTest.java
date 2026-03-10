@@ -20,7 +20,7 @@ public class UsaPhoneTest {
     void test_correct_lenght_Usa_phoneNumber(){
 
         assertThrows(RuntimeException.class, ()->{
-            SpainPhone usaPhone = new SpainPhone("11987654321");
+            UsaPhone usaPhone = new UsaPhone("11987654321");
         });
     }
 }
