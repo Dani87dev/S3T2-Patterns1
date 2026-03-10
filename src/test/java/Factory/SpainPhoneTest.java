@@ -3,6 +3,7 @@ package Factory;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SpainPhoneTest {
 
@@ -14,5 +15,12 @@ public class SpainPhoneTest {
         assertEquals("+34 623 45 67 89", spainFormatedNumber);
     }
 
+    @Test
+    void test_correct_lenght_Spain_phoneNumber(){
+
+        assertThrows(RuntimeException.class, ()->{
+            SpainPhone spainPhone = new SpainPhone("6623456789");
+        });
+    }
 
 }
